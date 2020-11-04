@@ -1,0 +1,22 @@
+name: Grunt build and update GitHub pages
+
+on: [push]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  grunt-build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Compile with NPM
+        run: npm install
+
+      - name: Compile with Grunt
+        run: grunt
+
+      - name: Update gh-pages
+        run: gh-pages
