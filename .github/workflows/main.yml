@@ -19,4 +19,4 @@ jobs:
         run: grunt
 
       - name: Update gh-pages
-        run: deploy-pages
+        uses: actions/deploy-pages@v4.0.5
