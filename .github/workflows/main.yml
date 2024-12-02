@@ -21,4 +21,4 @@ jobs:
       - name: Update gh-pages
         uses: actions/deploy-pages@v4.0.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
